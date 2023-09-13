@@ -10,13 +10,14 @@
 
     <!-- CSS And JS -->
     @vite(['resources/css/welcome.css', 'resources/js/welcome.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
     <div class="global-container">
         <input type="checkbox" id="menu-bar-checkbox">
         <div class="navbar" id="navbar">
-            <a href="{{ url('/') }}" class="logo"><span>No</span>Crastinate</a>
+            <a href="{{ url('/') }}" class="logo hover:scale-105"><span>No</span>Crastinate</a>
             <label for="menu-bar-checkbox">
                 <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round" />
@@ -87,28 +88,28 @@
             <div class="features">
                 <h1>Features</h1>
                 <div class="container">
-                    <div>
+                    <div class="hover:scale-105 cursor-pointer">
                         <img src="{{ asset('images/calendar.jpg') }}" alt="calendar">
                         <h1>Scheduling</h1>
                         <p>That's where we come in. Nocrastinate is your ultimate solution for mastering time
                 management and conquering your to-do l</p>
                         <button>More</button>
                     </div>
-                    <div>
+                    <div class="hover:scale-105 cursor-pointer">
                         <img src="{{ asset('images/todo.jpg') }}" alt="to-do">
                         <h1>To-Do</h1>
                         <p>That's where we come in. Nocrastinate is your ultimate solution for mastering time
                 management and conquering your to-do l</p>
                         <button>More</button>
                     </div>
-                    <div>
+                    <div class="hover:scale-105 cursor-pointer">
                         <img src="{{ asset('images/alarm-clock.jpg') }}" alt="alarm">
                         <h1>Notifications</h1>
                         <p>That's where we come in. Nocrastinate is your ultimate solution for mastering time
                 management and conquering your to-do l</p>
                         <button>More</button>
                     </div>
-                    <div>
+                    <div class="hover:scale-105 cursor-pointer">
                         <img src="{{ asset('images/files.jpg') }}" alt="calendar">
                         <h1>File Inventory</h1>
                         <p>That's where we come in. Nocrastinate is your ultimate solution for mastering time

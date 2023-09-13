@@ -47,6 +47,7 @@ require __DIR__.'/auth.php';
 // To prevent ordinary users from accessing admin/mod dashboards using URL
 Route::middleware(['auth','role:admin'])->group(function() {
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
+    Route::get('/admin/control', [AdminController::class, 'AdminDashboard'])->name('admin.control');
 });
 
 Route::middleware(['auth','role:moderator'])->group(function() {

@@ -12,13 +12,16 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard') || request()->routeIs('admin.dashboard') || request()->routeIs('moderator.dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    
+                    @if(auth()->user()->role === 'admin')
+                    <x-nav-link :href="route('admin.control')" :active="request()->routeIs('admin.control')">
+                            {{ __('Control') }}
+                    </x-nav-link>
+                    @endif
                 </div>
             </div>
-
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
