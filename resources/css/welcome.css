@@ -1,0 +1,136 @@
+@import 'base.css';
+
+.global-container {
+    margin: auto;
+    width: 1800px;
+    position: relative;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    width: inherit;
+    justify-content: space-around;
+    padding: 0 20px;
+    align-items: center;
+    height: 70px;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+
+    /* Menu */
+    & a:not(.logo) {
+        margin: 5px 15px;
+
+        &:hover {
+            color: #FF9B50;
+        }
+    }
+    & label {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        & svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+#menu-bar-checkbox {
+    display: none;
+}
+/* About Section */
+#about {
+    padding-top: 100px;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    
+    /* Logo */
+    & .logo, .logo span {
+        font-size: 3.5rem;
+        padding: 0px 0;
+    }
+
+    /* Description */
+    & .hero-desc {
+        width: 50%;
+        min-width: 300px;
+        text-align: center;
+        padding: 20px 0;
+        margin: auto;
+    }
+
+    /* Benefits */
+    & .benefits {
+        display: flex;
+        padding: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        & p {
+            padding: 10px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: baseline;
+            & svg {
+                height: 20px;
+                width: 20px;
+                padding-right: 5px;
+            }
+        }
+    }
+
+    /* Features */
+    & .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > h1 {
+            font-size: 35px;
+            margin: 20px;
+        }
+
+        & .container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+
+            & div {
+                width: 18%;
+                padding: 20px;
+                border-radius: 8px;
+                background: #00000005;
+                border: 1px solid #00000005;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px;
+
+                & h1 {
+                    font-size: 20px;
+                    color: rgba(0, 128, 0, 0.5);
+                }
+
+                & p {
+                    font-size: 15px;
+                    padding: 15px 0;
+                }
+                & button {
+                    width: 100px;
+                    padding: 5px 0;
+                    border-radius: 20px;
+                    outline: none;
+                    color: #fff;
+                    cursor: pointer;
+                    background: rgba(0, 128, 0, 0.541);
+                    border: none;
+                }
+            }
+        }
+
+        & img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
